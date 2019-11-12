@@ -63,6 +63,15 @@ class MainActivity : AppCompatActivity() {
             keySignatureValue!!.text = easyKey
 
 //       generates random progression
+            val easyProgressionGenerator = Random()
+
+//            generate random progression
+            val randomEasyProg = easyProgressionGenerator.nextInt(easyChords.size)
+
+            val easyProg = easyChords[randomEasyProg]
+
+            progressionTextView!!.text = easyProg
+
 
         }
     }
