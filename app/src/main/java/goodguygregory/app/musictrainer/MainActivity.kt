@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             "I - IV - V - I - vi - ii6 - V - I",
             "I - IV - V - I - vi - ii6 - V - I",
             "i - V - VI - III - iv - i - ii6/5 - V7",
-            "i - V - V7 - i i6 - iv - V7 - i",
+            "i - V - V7 - i - i6 - iv - V7 - i",
             "i - VI - III - vii*",
             "I - IV - V - V7 - I - IV - V7 - I",
             "bVI - bIII - bVIII - IV - I - I - I - I",
@@ -66,7 +66,30 @@ class MainActivity : AppCompatActivity() {
         )
 
 //        hardProgressions
-//        val hardChords = arrayOf()
+        val hardChords = arrayOf(
+            "Imaj7 - vm9 - IVmaj7 - bVII13",
+            "i - i - V - V - i6 - iv - V7 - i",
+            "i - iv - ii* - V7 - VI - ii*6 - V7 - i",
+            "I - bIII7 - bVI7 - bII7",
+            "III7 - III7 - VI7 - VI7 - II7 - II7 - V7 - V7",
+            "i - VII - bVII - i -i - III - vi - v",
+            "I - ii7 - I6 - IVadd9 - V/VI - I6 - V7 - Isus4",
+            "I - I7 - IV - iv - vi - II7 - ii - V7",
+            "I - III7 - IV - VI - ii - VI - ii - V7",
+            "I - IV - vii* - iii - vi - ii - V - I",
+            "ii - bIII7 - bVI - VII7 - III - V7 - I - I",
+            "I - I - [Ger+6] - [Ger+6]",
+            "I - IV - ii - V7 - vi - ii6 - V7 - I",
+            "I - bii* - ii - biii* - iii - vi - I64 - V7",
+            "I - v6 - vii*6/V - V - I6 - ii6 - V7 - I",
+            "Vsus7 - V7 - I - vi",
+            "ii - ii - I - I - V6 - V6 - bVII - VI",
+            "I - I6/3 - IV - #IV* - V - vi - ii6 - V",
+            "i - iv- V - V7 - i - iv - V7 - i",
+            "I - II - vi - IV - bVI - bVII - V - bVII",
+            "I - V6 - IV6 - iii6 - ii6 - I6 - vii*6 - I",
+            "V7 - I - III7 - vi",
+            "I - IV - V - bvi* - vi - ii - V7 - I")
 
         generateProgressionButton!!.setOnClickListener {
 
