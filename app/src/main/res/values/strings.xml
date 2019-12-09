@@ -13,13 +13,22 @@
     <string name="hard_mode">Hard Mode</string>
 
 
-    <!--    Login Values-->
-    <string name="title_activity_login">Sign in</string>
+    <!--    SignupActivity Values-->
+    <string name="title_activity_sign_up">Sign Up</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_up">Sign n</string>
     <string name="app_title">"Music Trainer"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="already_user_login">"Already have an account? Sign in here"</string>
+
+<!--  LoginActivity Values  -->
+    <string name="title_activity_login">Sign in</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="action_log_in">Login</string>
+    <string name="not_user_login">"Already have an account? Sign in here"</string>
+
+    <!--  Home Text View  -->
+
+
 </resources>
