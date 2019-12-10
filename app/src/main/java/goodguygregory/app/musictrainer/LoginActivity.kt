@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.Button
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
@@ -15,6 +16,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var signUpText: TextView
 
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +27,8 @@ class LoginActivity : AppCompatActivity() {
         loginButton = findViewById(R.id.action_sign_in)
         signUpText = findViewById(R.id.not_user_register)
 
+//        Firebase Auth:
+        auth = FirebaseAuth.getInstance()
 
         loginButton.setOnClickListener{
             val email = loginEmail.text.toString()
