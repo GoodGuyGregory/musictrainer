@@ -33,4 +33,11 @@
     <string name="welcome_message">Welcome to Music Trainer, to begin grab your instrument and find a comfy chair. First Tune or Turn on your instrument and begin warming up with some basic scale patterns.
         When you are ready press the button below</string>
     <string name="begin_button">Begin Practice!</string>
+
+<!--    Difficulty Selection View:   -->
+    <string name="diff_title">Practice Difficulty</string>
+    <string name="easy_button">Easy</string>
+    <string name="medium_button">Medium</string>
+    <string name="hard_button">Hard</string>
+
 </resources>

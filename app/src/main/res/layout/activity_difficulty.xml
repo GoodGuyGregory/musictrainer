@@ -4,52 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".DifficultyActivity">
 
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="164dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="52dp"
-        android:text="Button"
+    <TextView
+        android:id="@+id/diff_title"
+        android:layout_width="292dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="112dp"
+        android:background="@color/boxColor"
+        android:textColor="@color/textPrimary"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/diff_title" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/easy_button"
         android:layout_width="164dp"
         android:layout_height="59dp"
-        android:layout_marginTop="100dp"
-        android:text="Button"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="124dp"
+        android:textColor="#ffff"
+        android:background="@color/easyMode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/diff_title"
+        tools:text="@string/easy_button" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/medium_button"
         android:layout_width="164dp"
         android:layout_height="59dp"
-        android:layout_marginTop="52dp"
-        android:text="Button"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="116dp"
+        android:textColor="#ffff"
+        android:background="@color/medMode"
+        tools:text="@string/medium_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easy_button" />
+
+    <Button
+        android:id="@+id/hard_button"
+        android:layout_width="164dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="156dp"
+        android:textColor="#ffff"
+        android:background="@color/hardMode"
+        tools:text="@string/hard_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/medium_button"
+        app:layout_constraintVertical_bias="0.466" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="178dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="100dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.872"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
