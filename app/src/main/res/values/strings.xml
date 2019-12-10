@@ -32,4 +32,5 @@
     <string name="welcome_text">Welcome!</string>
     <string name="welcome_message">Welcome to Music Trainer, to begin grab your instrument and find a comfy chair. First Tune or Turn on your instrument and begin warming up with some basic scale patterns.
         When you are ready press the button below</string>
+    <string name="begin_button">Begin Practice!</string>
 </resources>
