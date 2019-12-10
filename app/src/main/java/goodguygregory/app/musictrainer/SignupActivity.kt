@@ -27,6 +27,9 @@ class SignupActivity : AppCompatActivity() {
         signUp = findViewById(R.id.action_signup)
         loginSwitch = findViewById(R.id.already_user_login)
 
+//        Authenticate Users with Firebase inside of the Project:
+        FirebaseAuth
+
         loginSwitch.setOnClickListener {
 //            Start LoginActivity:
             val intent = Intent(this, LoginActivity::class.java)
