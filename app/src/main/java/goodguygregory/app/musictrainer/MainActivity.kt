@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         //        Assign View Items from the Layout file to the Corresponding Variables
 
+
 //       key signature values for the user
         keySignatureValue = findViewById(R.id.keySignatureValue)
 
@@ -45,10 +46,27 @@ class MainActivity : AppCompatActivity() {
 //        Confirm Values of diff
 //        Log.d(TAG, "Diff: $diff")
 
+        fun checkDiff() {
+            when (diff) {
+                "easy" -> {
+                    keySignatureValue!!.text = progressions.getEasyKey()
+                    progressionTextView!!.text = progressions.getEasyProgression()
+
+                }
+                "medium" -> {
+                    keySignatureValue!!.text = progressions.getMedKey()
+                    progressionTextView!!.text = progressions.getMedProgression()
+                }
+                else -> {
+                    keySignatureValue!!.text = progressions.getHardKey()
+                    progressionTextView!!.text = progressions.getHardProgression()
+                }
+            }
+        }
 
 
         generateProgressionButton!!.setOnClickListener {
-//            when for
+            checkDiff()
         }
     }
 }

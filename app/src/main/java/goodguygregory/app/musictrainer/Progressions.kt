@@ -79,8 +79,10 @@ class Progressions {
         "I - IV - V - bvi* - vi - ii - V7 - I")
 
 //Methods:
-    fun getEasySignature():String {
-    //       generates random new key signatures
+
+    // :Generates Random Easy Key:
+    fun getEasyKey():String {
+
     val easyKeyGenerator = Random()
 
     val randomEasy = easyKeyGenerator.nextInt(easykeySignatures.size)
@@ -90,5 +92,62 @@ class Progressions {
     return easyKey
     }
 
+    fun getMedKey():String {
+
+        val medKeyGenerator = Random()
+
+        val randomMed = medKeyGenerator.nextInt(medKeySignatures.size)
+
+        val medKey = easykeySignatures[randomMed]
+
+        return medKey
+    }
+
+    fun getHardKey():String {
+
+        val hardKeyGenerator = Random()
+
+        val randomHard = hardKeyGenerator.nextInt(hardKeySignatures.size)
+
+        val hardKey = hardKeySignatures[randomHard]
+
+        return hardKey
+    }
+
+    //generates random easy chord progression
+    fun getEasyProgression():String {
+        val easyProgressionGenerator = Random()
+
+        //            generate random progression
+        val randomEasyProg = easyProgressionGenerator.nextInt(easyChords.size)
+
+        val easyProg = easyChords[randomEasyProg]
+
+        return easyProg
+    }
+
+    //generates random medium chord progression
+    fun getMedProgression():String {
+        val medProgressionGenerator = Random()
+
+        //            generate random progression
+        val randomMedProg = medProgressionGenerator.nextInt(mediumChords.size)
+
+        val medProg = mediumChords[randomMedProg]
+
+        return medProg
+    }
+
+    //generates random hard chord progression
+    fun getHardProgression():String {
+        val hardProgressionGenerator = Random()
+
+        //            generate random progression
+        val randomHardProg = hardProgressionGenerator.nextInt(hardChords.size)
+
+        val hardProg = hardChords[randomHardProg]
+
+        return hardProg
+    }
 
 } //class
