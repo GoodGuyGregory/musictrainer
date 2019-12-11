@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 private const val TAG ="MainActivity"
@@ -18,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val progressions = Progressions()
 
 
-//    Declare Variables
+    //    Declare Variables
     private var generateProgressionButton: Button? = null
     private var keySignatureValue: TextView? = null
     private var progressionTextView: TextView? = null
@@ -41,9 +43,29 @@ class MainActivity : AppCompatActivity() {
 
 
 //        Set Difficulty:
-          val diff = intent.getStringExtra("EXTRA_DIFF")
+        val diff = intent.getStringExtra("EXTRA_DIFF")
 
-//        Confirm Values of diff
+        when (diff) {
+            "easy" -> {
+                keySignatureValue!!.text = progressions.getEasyKey()
+                progressionTextView!!.text = progressions.getEasyProgression()
+            }
+            "medium" -> {
+                keySignatureValue!!.text = progressions.getMedKey()
+                progressionTextView!!.text = progressions.getMedProgression()
+            }
+            "hard" -> {
+                keySignatureValue!!.text = progressions.getHardKey()
+                progressionTextView!!.text = progressions.getHardProgression()
+            }
+            else -> {
+                Toast.makeText(
+                baseContext, "Something Went Wrong!",
+                Toast.LENGTH_SHORT
+            ).show()
+            }
+        }
+        //        Confirm Values of diff
 //        Log.d(TAG, "Diff: $diff")
 
         fun checkDiff() {
@@ -57,16 +79,22 @@ class MainActivity : AppCompatActivity() {
                     keySignatureValue!!.text = progressions.getMedKey()
                     progressionTextView!!.text = progressions.getMedProgression()
                 }
-                else -> {
+                "hard" -> {
                     keySignatureValue!!.text = progressions.getHardKey()
                     progressionTextView!!.text = progressions.getHardProgression()
+                }
+                else -> {
+                    Toast.makeText(
+                    baseContext, "Something Went Wrong!",
+                    Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
 
-
-        generateProgressionButton!!.setOnClickListener {
-            checkDiff()
+            generateProgressionButton!!.setOnClickListener {
+                checkDiff()
+         }
         }
+
     }
-}

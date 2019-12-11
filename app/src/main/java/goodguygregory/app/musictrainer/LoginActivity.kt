@@ -70,6 +70,7 @@ class LoginActivity : AppCompatActivity() {
                             baseContext, "Let's Jam!.",
                             Toast.LENGTH_SHORT
                         ).show()
+
                         val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
 

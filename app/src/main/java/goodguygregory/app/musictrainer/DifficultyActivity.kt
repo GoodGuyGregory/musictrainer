@@ -42,6 +42,7 @@ class DifficultyActivity : AppCompatActivity() {
             //            Set intent for the Difficulty Activity
             // TODO: Pass a Value for the MainActivity to implement Code
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("EXTRA_DIFF", "easy")
             startActivity(intent)
         }
 
@@ -49,7 +50,7 @@ class DifficultyActivity : AppCompatActivity() {
             //            Set intent for the Difficulty Activity
             // TODO: Pass a Value for the MainActivity to implement Code
             val intent = Intent(this, MainActivity::class.java)
-
+            intent.putExtra("EXTRA_DIFF", "medium")
             startActivity(intent)
         }
 
