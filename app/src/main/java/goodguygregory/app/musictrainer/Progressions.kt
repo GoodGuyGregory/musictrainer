@@ -98,7 +98,7 @@ class Progressions {
 
         val randomMed = medKeyGenerator.nextInt(medKeySignatures.size)
 
-        val medKey = easykeySignatures[randomMed]
+        val medKey = medKeySignatures[randomMed]
 
         return medKey
     }

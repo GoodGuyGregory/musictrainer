@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private var generateProgressionButton: Button? = null
     private var keySignatureValue: TextView? = null
     private var progressionTextView: TextView? = null
+    private lateinit var difficultyRating: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,20 +42,25 @@ class MainActivity : AppCompatActivity() {
 //      generates another Progression for the user
         generateProgressionButton = findViewById(R.id.generateProgressionButton)
 
+        difficultyRating = findViewById(R.id.diff)
 
 //        Set Difficulty:
         val diff = intent.getStringExtra("EXTRA_DIFF")
 
+//        Set Value for the UI:
+        difficultyRating.setText("${diff} Progressions")
+
+
         when (diff) {
-            "easy" -> {
+            "Easy" -> {
                 keySignatureValue!!.text = progressions.getEasyKey()
                 progressionTextView!!.text = progressions.getEasyProgression()
             }
-            "medium" -> {
+            "Medium" -> {
                 keySignatureValue!!.text = progressions.getMedKey()
                 progressionTextView!!.text = progressions.getMedProgression()
             }
-            "hard" -> {
+            "Hard" -> {
                 keySignatureValue!!.text = progressions.getHardKey()
                 progressionTextView!!.text = progressions.getHardProgression()
             }
@@ -70,16 +76,16 @@ class MainActivity : AppCompatActivity() {
 
         fun checkDiff() {
             when (diff) {
-                "easy" -> {
+                "Easy" -> {
                     keySignatureValue!!.text = progressions.getEasyKey()
                     progressionTextView!!.text = progressions.getEasyProgression()
 
                 }
-                "medium" -> {
+                "Medium" -> {
                     keySignatureValue!!.text = progressions.getMedKey()
                     progressionTextView!!.text = progressions.getMedProgression()
                 }
-                "hard" -> {
+                "Hard" -> {
                     keySignatureValue!!.text = progressions.getHardKey()
                     progressionTextView!!.text = progressions.getHardProgression()
                 }

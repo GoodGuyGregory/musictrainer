@@ -7,17 +7,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-    <TextView
-        android:id="@+id/diff"
-        android:layout_width="293dp"
-        android:layout_height="35dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="35dp"
-        tools:text="@string/diff" />
+
 
     <TextView
-        android:id="@+id/keySignature"
+        android:id="@+id/diff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/boxColor"
@@ -30,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.846"
-        tools:text="@string/keySignature" />
+        tools:text="@string/diff" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -43,6 +36,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.552">
 
+<!--        Data Container   -->
         <TextView
             android:id="@+id/keySignatureValue"
             android:layout_width="wrap_content"
@@ -82,7 +76,7 @@
         android:padding="15dp"
         android:text="Generate Another Progression"
         android:textColor="@color/textSecondary"
-        android:textSize="18sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
