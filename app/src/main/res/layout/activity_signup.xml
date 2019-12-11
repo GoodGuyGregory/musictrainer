@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".LoginActivity">
-
+    tools:context=".SignupActivity"
+    >
 
     <TextView
         android:id="@+id/app_title"
@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/login_email"
+        android:id="@+id/prompt_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -43,7 +43,7 @@
         app:layout_constraintVertical_bias="0.37" />
 
     <EditText
-        android:id="@+id/login_password"
+        android:id="@+id/prompt_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -58,13 +58,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/action_sign_in"
+        android:id="@+id/action_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="252dp"
         android:background="@color/boxColor"
-        android:text="Sign In"
         android:textColor="@color/textPrimary"
+        android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -73,15 +72,18 @@
         app:layout_constraintVertical_bias="0.179" />
 
     <TextView
-        android:id="@+id/not_user_register"
+        android:id="@+id/already_user_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
         android:background="@color/boxColor"
-        android:text="Not Registered? Sign up here."
+        android:text="Already have an account? Sign in here."
         android:textColor="@color/textPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/action_sign_in"
+        app:layout_constraintTop_toBottomOf="@+id/action_signup"
         app:layout_constraintVertical_bias="0.202" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
