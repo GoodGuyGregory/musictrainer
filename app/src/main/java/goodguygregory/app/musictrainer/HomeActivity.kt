@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
 
         beginButton.setText(R.string.begin_button)
 
-//        Begin
+//        Begin Practice Activity:
         beginButton.setOnClickListener {
 //            Set intent for the Difficulty Activity
             val intent = Intent(this, DifficultyActivity::class.java)
